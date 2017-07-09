@@ -64,6 +64,7 @@ python3 hydroquebec
 ## Limites
 
 - [ ] Seul un contrat est pris compte
+- [ ] La valeur affiché est celle de la veille
 
 
 ## Historique versions
@@ -81,4 +82,11 @@ Voir ``LICENSE`` pour plus d'information.
 Fork du projet
 
 # Liens
+Liste de liens utiles pour ce script
+## Domoticz
 - https://easydomoticz.com/domoticz-et-windows-scripts_et_action_on_action_off/
+- http://www.domoticz.com/wiki/Python_-_Read-out_of_DDS238_kWh-meter_and_upload_to_Domoticz_and_PVOutput
+- http://www.domoticz.com/wiki/Domoticz_API/JSON_URL%27s#Base64_encode
+
+## Git
+- [Rebase without git history](https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github#26000395)
