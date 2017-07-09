@@ -12,10 +12,9 @@
 
 
 import os
-import time
+# import time
 import logging
-import logging.handlers
-
+# import logging.handlers
 
 class LoggerConfig(object):
     '''
@@ -51,16 +50,16 @@ class LoggerConfig(object):
 #         self.__logger.addHandler(handler)
 
         # create error file handler rotating and set level to error
-        if os.path.exists(output_dir):
-            log_file = os.path.join(output_dir, file_basename + ".log")
-        else:
-            log_file = file_basename + ".log"
-
-        handler = logging.handlers.RotatingFileHandler(log_file, "w", maxBytes=2097152,
-                                                       backupCount=2)
-
-        handler.setFormatter(formatter)
-        self.__logger.addHandler(handler)
+#         if os.path.exists(output_dir):
+#             log_file = os.path.join(output_dir, file_basename + ".log")
+#         else:
+#             log_file = file_basename + ".log"
+# 
+#         handler = logging.handlers.RotatingFileHandler(log_file, "w", maxBytes=2097152,
+#                                                        backupCount=2)
+# 
+#         handler.setFormatter(formatter)
+#         self.__logger.addHandler(handler)
 
     def get_logger(self):
         '''
