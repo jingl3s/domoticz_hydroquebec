@@ -1,0 +1,17 @@
+{
+    "HYDROQUEBEC": {
+        "U": "UserName",
+        "P": "Password",
+        "PYHYDRO": "pyhydroquebec"
+    },
+    "DOMOTICZ": {
+        "ADRESSE": "http://IP_ADDRESSE:PORT",
+        "URL_LIT": "/json.htm?type=devices&rid=",
+        "HYDRO": {
+            "IDX": "ID_DOMOTICZ",
+            "URL_ECRIT": "/json.htm?type=command&param=udevice&idx=ID_DOMOTICZ&nvalue=0&svalue=",
+            "JSON_VAL_LIT": "Data",
+            "JSON_VAL_ECRIT": "CounterToday"
+        }
+    }
+}
