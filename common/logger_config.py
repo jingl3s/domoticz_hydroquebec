@@ -35,7 +35,7 @@ class LoggerConfig(object):
         Method permettant de definir le logger
         '''
         self.__logger = logging.getLogger()
-        self.__logger.setLevel(logging.DEBUG)
+        self.__logger.setLevel(logging.WARNING)
         formatter = logging.Formatter(
             "%(asctime)s-%(levelname)7s-%(funcName)s-%(message)s")
 
