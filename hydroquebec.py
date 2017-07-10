@@ -191,7 +191,7 @@ def main():
         # Vérification si aucune mise à jour déja réalisée
         need_update = _is_need_update_domoticz(
             domoticz_interface, json_configuration['DOMOTICZ'])
-        need_update = True
+
         if need_update:
 
             # Récupération de la valeur de la veille
