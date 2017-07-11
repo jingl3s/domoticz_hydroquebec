@@ -195,8 +195,7 @@ def main():
         if need_update:
 
             # Récupération de la valeur de la veille
-            #             consommation_veille = _get_hydroquebec_valeur_veille(json_configuration['HYDROQUEBEC'])
-            consommation_veille = 3.36
+            consommation_veille = _get_hydroquebec_valeur_veille(json_configuration['HYDROQUEBEC'])
 
             # Envoi de la nouvelle valeur
             _mise_a_jour_domoticz(
