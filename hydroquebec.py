@@ -5,7 +5,7 @@
 '''
 
 # license
-# 
+#
 # This code is free software; you can redistribute it and/or modify it
 # under the terms of the DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE (see the file
 # LICENSE included with the distribution).
@@ -20,6 +20,7 @@ import subprocess
 from common.configuration_loader import ConfigurationLoader
 from common.logger_config import LoggerConfig
 from domoticz.domoticz import Domoticz
+import sys
 
 
 def _get_hydroquebec_valeur_veille(json_configuration_hydroquebec):
@@ -192,10 +193,16 @@ def main():
         need_update = _is_need_update_domoticz(
             domoticz_interface, json_configuration['DOMOTICZ'])
 
+        # Parameter to force an update when something goes wrong
+        if len(sys.argv) > 1:
+            if sys.argv[1] == "force":
+                need_update = True
+
         if need_update:
 
             # Récupération de la valeur de la veille
-            consommation_veille = _get_hydroquebec_valeur_veille(json_configuration['HYDROQUEBEC'])
+            consommation_veille = _get_hydroquebec_valeur_veille(
+                json_configuration['HYDROQUEBEC'])
 
             # Envoi de la nouvelle valeur
             _mise_a_jour_domoticz(

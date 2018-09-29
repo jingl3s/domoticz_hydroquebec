@@ -36,6 +36,7 @@ class LoggerConfig(object):
         '''
         self.__logger = logging.getLogger()
         self.__logger.setLevel(logging.WARNING)
+        self.__logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter(
             "%(asctime)s-%(levelname)7s-%(funcName)s-%(message)s")
 
