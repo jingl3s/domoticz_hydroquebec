@@ -34,7 +34,7 @@ def _get_hydroquebec_valeur_veille(json_configuration_hydroquebec):
     CHAMP_HYDRO_JSON = "yesterday_total_consumption"
 
     _logger = logging.getLogger(__name__)
-    cmd_hydro = [json_configuration_hydroquebec["PYHYDRO"], "-u",
+    cmd_hydro = [sys.executable, json_configuration_hydroquebec["PYHYDRO"], "-u",
                  json_configuration_hydroquebec["U"], "-p", json_configuration_hydroquebec["P"], "-j"]
     _logger.debug(' '.join(cmd_hydro))
     output = subprocess.check_output(cmd_hydro)
@@ -197,6 +197,10 @@ def main():
         if len(sys.argv) > 1:
             if sys.argv[1] == "force":
                 need_update = True
+
+        consommation_veille = _get_hydroquebec_valeur_veille(
+            json_configuration['HYDROQUEBEC'])
+
 
         if need_update:
 
