@@ -197,17 +197,14 @@ def main():
         if len(sys.argv) > 1:
             if sys.argv[1] == "force":
                 need_update = True
-
+            if sys.argv[1] == "display":
+                need_update = False
+                
+        # Récupération de la valeur de la veille
         consommation_veille = _get_hydroquebec_valeur_veille(
             json_configuration['HYDROQUEBEC'])
 
-
         if need_update:
-
-            # Récupération de la valeur de la veille
-            consommation_veille = _get_hydroquebec_valeur_veille(
-                json_configuration['HYDROQUEBEC'])
-
             # Envoi de la nouvelle valeur
             _mise_a_jour_domoticz(
                 domoticz_interface, consommation_veille, json_configuration['DOMOTICZ'])
